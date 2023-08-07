@@ -30,5 +30,14 @@
     "createdAt": "2023-07-19T04:21:54.268Z",
     "version": "6.3.0",
     "commit": "c17498042fc79734cec390e6314cbe810e95bf4c"
+  },
+  "description": "* [1. Preâmbulo](#1-preâmbulo)\r * [2. Resumo do projeto](#2-resumo-do-projeto)\r * [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)\r * [4. Considerações gerais](#4-considerações-gerais)\r * [5. Critérios mínimos de aceitação do\r   projeto](#5-critérios-mínimos-de-aceitação-do-projeto)\r * [6. Hacker edition](#6-hacker-edition)\r * [7. Considerações técnicas](#7-considerações-técnicas)\r * [8. Pistas, dicas e leituras\r   complementares](#8-pistas-dicas-e-leituras-complementares)\r * [9. Checklist](#9-checklist)",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
