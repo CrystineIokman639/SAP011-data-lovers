@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Rick and Morty</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section id="root">
-      <h1>Menu</h1>
-      <input type="text" name="seach" placeholder="BUSCAR">
-      <ul>
-        <li>especie</li>
-        <li>estado de vida</li>
-        <li>genero</li>
-        <li>planeta</li>
-        <li>A-Z</li>
-      </ul>
-    </section>
-    <main>
-      <div id="row">
-        <div id="cards">
-          <p id ="1">Rick Sanches<p>
 
-        </div>
+<head>
+  <meta charset="utf-8">
+  <title>Rick and Morty</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  
+  <section class="container">
+  <section class="menu">
+    <h1>Menu</h1>
+    <input type="text" name="seach" placeholder="BUSCAR">
+    <input type="submit" id ="btn" value="🔍">
+    <ul>
+      <li>especie</li>
+      <li>estado de vida</li>
+      <li>genero</li>
+      <li>planeta</li>
+      <li>A-Z</li>
+    </ul>
+  </section>
+  <header>
+    <Section class="title">Rick and Morty</Section>
+  </header>
+  <main>
+    <div class="row">
+      <div class="cards">
+        <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/1.jpeg">
+        <ul>
+          <li id="name">Nome</li>
+          <li id="status">STATUS</li>
+          <li id="spicies">Especie</li>
+          <li id="gender">Genero</li>
+          <li id="origin">Origen</li>
+          <li id="code">1</li>
+        </ul>
       </div>
-    </main>
-    <footer> @copy </footer>
-    <script src="main.js" type="module"></script>
-  </body>
+    </div>
+  </main>
+  </section>
+  <footer class="footer">
+  <p>&copy;Crys & Leth</p>
+  <p><cite><a href="https://www.laboratoria.la/br"><q>Laboratoria Brasil.</q></a><p>
+   
+  </footer >
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
