@@ -1,5 +1,9 @@
-*{
-    background-image: ;
+body{
+    justify-content: center;
+    align-items: center;
+    background-image: url("image/fundo.gif");
+    background-repeat: no-repeat;
+    background-color: black;
 }
 
 .menu{
@@ -16,14 +20,28 @@
     float: center;
 }
 
-.cards{
-    height: 300px;
-    width: 500px;
-    background-color: blue;
-    float: center;
-    font:magenta;
-    /* ver como "remodelar" a imagem para editar o card */
+@font-face {
+    font-family:'get-schwifty';
+    src:url("image/font/get_schwifty.ttf");
+}
+/* https://pt.stackoverflow.com/questions/191805/como-e-qual-a-melhor-forma-de-usar-fontes-com-css */
 
+.row{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card1, .card2, .card3 {
+    margin-left: 10px;
+    padding: 20px;
+    font-family: "get-schwifty";
+    height: 450px;
+    width: 375px;
+    background-color: #44ff00;
+    border-radius: 25px;
+    font-size: 120%;
+    /* ver como "remodelar" a imagem para editar o card */
 }
 
 .footer{
@@ -34,5 +52,6 @@
 
 }
 .title{
-    
+    height: 900px;
+    width: 150px;
 }
