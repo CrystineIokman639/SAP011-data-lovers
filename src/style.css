@@ -1,57 +1,105 @@
-body{
+body {
     justify-content: center;
     align-items: center;
     background-image: url("image/fundo.gif");
     background-repeat: no-repeat;
     background-color: black;
+    margin: 0; /* Remove a margem padrão */
 }
 
-.menu{
+/* Estilizando os dois riscos no canto superior direito do menu */
+.menu {
+    color: aliceblue;
     height: 760px;
     width: 200px;
-    background-color: aqua;
+    background-image: url("image/download.jpg");
+    background-color: rgb(21, 255, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     float: left;
+    position: relative; /* Define a posição do menu como referência para os pseudo-elementos */
 }
 
-.text{
-    height: 164px;
-    width: 500px;
-    background-color: aqua;
-    float: center;
+.menu ul,
+.menu li {  /* Define a cor do texto como branca para as listas não ordenadas e os itens de lista */
+color: white;
+}
+
+/* Pseudo-elementos antes e depois do menu para os riscos */
+.menu::before,
+.menu::after {
+    content: ""; /* Cria elementos retangulares */
+    display: block;
+    width: 20px; /* Define a largura e altura dos riscos */
+    height: 3px;
+    background-color: rgb(43, 255, 0); /* Define a cor preta para os riscos */
+    position: absolute; /* Posiciona os riscos no canto superior direito */
+    top: 15px;
+    right: 10px;
+}
+
+/* Ajusta a posição do segundo traço */
+.menu::after {
+    top: 25px;
+}
+
+/* Estilizações para a caixa de busca */
+input[type="text"] {
+    /* Define a cor do texto e a cor de fundo */
+    color: rgb(9, 255, 0); /*texto*/
+    background-color: rgb(60, 255, 0); /*fundo*/
+    /* Define um raio de borda para arredondar os cantos */
+    border-radius: 10px;
+    /* Define a largura e altura da caixa de busca */
+    width: 150px;
+    height: 22px;
+}
+
+/* Estilizações para o texto de placeholder da caixa de busca */
+input[type="text"]::placeholder {
+    color: black; /* Define a cor do texto de placeholder */
+    font-style: oblique;  /* Define o estilo do texto como oblíquo e a fonte como mais pesada */
+    font-weight: bolder;
+    text-align: center;
 }
 
 @font-face {
     font-family:'get-schwifty';
     src:url("image/font/get_schwifty.ttf");
 }
-/* https://pt.stackoverflow.com/questions/191805/como-e-qual-a-melhor-forma-de-usar-fontes-com-css */
 
-.row{
-    display:flex;
+.row {
+    display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: transparent;
+    margin: 0;/* Remove a margem padrão */
 }
 
 .card1, .card2, .card3 {
-    margin-left: 10px;
+    margin: 10px;
     padding: 20px;
     font-family: "get-schwifty";
     height: 450px;
     width: 375px;
     background-color: #44ff00;
     border-radius: 25px;
-    font-size: 120%;
-    /* ver como "remodelar" a imagem para editar o card */
+    font-size: 120%;/* Define o tamanho da fonte */
+    position: relative; /* Define a posição relativa para z-index */
+    z-index: 1;/* Define a hierarquia dos items (qual em cima de qual) */
 }
 
-.footer{
+.footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;            
-
+    height: 2.5rem;
 }
-.title{
-    height: 900px;
-    width: 150px;
+
+.title {
+    width: 65%;
+    height: 200px;
+    background-position: center top;
+    background-attachment: fixed; /* Mantém a imagem de fundo fixa no topo */
 }
