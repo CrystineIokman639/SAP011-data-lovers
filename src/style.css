@@ -18,57 +18,46 @@ body {
     margin: 0; /* Remove a margem padrão */
 }
 
-/* Estilizando os dois riscos no canto superior direito do menu */
 .menu {
-    color: aliceblue;
-    height: 760px;
-    width: 250px;
-    background-image: url("image/download.jpg");
-    background-color: rgb(21, 255, 0);
+    color:#14d1d4ec;
+    -webkit-text-stroke: 0.1px;
+    -webkit-text-stroke-color: rgb(186, 201, 20);
+    height: 615px;
+    width: 210px;
+    background-image: url("image/rick-and-morty.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     float: left;
     font-family: "get-schwifty";
-    font-size: 25px;
-    font: rgb(21, 255, 0);;
+    font-size: 30px;
 }
 
 
 .menu ul,
 .menu li {  /* Define a cor do texto como branca para as listas não ordenadas e os itens de lista */
-color: white;
-}
-
-/* Pseudo-elementos antes e depois do menu para os riscos */
-.menu::before,
-.menu::after {
-    content: ""; /* Cria elementos retangulares */
-    display: block;
-    width: 20px; /* Define a largura e altura dos riscos */
-    height: 3px;
-    background-color: rgb(43, 255, 0); /* Define a cor preta para os riscos */
-    position: absolute; /* Posiciona os riscos no canto superior direito */
-    top: 15px;
-    right: 10px;
-
-}
-
-/* Ajusta a posição do segundo traço */
-.menu::after {
-    top: 25px;
+    color:#14d1d4ec;
+    -webkit-text-stroke: 0.1px;
+    -webkit-text-stroke-color: rgb(186, 201, 20);
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px;
 }
 
 /* Estilizações para a caixa de busca */
 input[type="text"] {
     /* Define a cor do texto e a cor de fundo */
     color: rgb(9, 255, 0); /*texto*/
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgba(24, 27, 27, 0.737);
     background-color: rgb(60, 255, 0); /*fundo*/
     /* Define um raio de borda para arredondar os cantos */
     border-radius: 10px;
     /* Define a largura e altura da caixa de busca */
     width: 150px;
     height: 22px;
+    position: center;
+    font: black;
 }
 
 /* Estilizações para o texto de placeholder da caixa de busca */
@@ -79,26 +68,61 @@ input[type="text"]::placeholder {
     text-align: center;
 }
 
+.container {
+    position: relative;
+    padding: 15px;
+    max-width: 750px;
+    margin: 0 auto;
+    
+}
+
+
 .row-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: transparent;
-    margin: 0;/* Remove a margem padrão */
+    /* background-color: transparent; */
+    overflow-x: auto;
+
+}
+.arrow-left,
+.arrow-right{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 20px;
+    line-height: 250px;
+    width: 20px;
+    text-align: center;
+    color:#16e0e3;
+    cursor: pointer;
+    border:none;
+    background: linear-gradient(to left, transparent 0%, rgb(209, 253, 15) 200%);
+    border-radius: 25px;
 }
 
-.card1 img, .card2 img, .card3 img {
+.arrow-right{
+    left:auto;
+    right:0;
+    background: linear-gradient(to right, transparent 0%, green 200%);
+}
+
+.card1 img, .card2 img, .card3 img, .card4 img  {
     max-width: 200px;
-    margin: 50px;
     padding: 20px;
     font-family: "get-schwifty";
     height: 260px;
-    /* width: 375px; */
+    width: 375px;
     background-color: #44ff00;
     border-radius: 25px;
     font-size: 120%;/* Define o tamanho da fonte */
     position: relative; /* Define a posição relativa para z-index */
     z-index: 1;/* Define a hierarquia dos items (qual em cima de qual) */
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
 }
 
 .footer {
@@ -106,6 +130,7 @@ input[type="text"]::placeholder {
     bottom: 0;
     width: 100%;
     height: 2.5rem;
+    color:#44ff00
 }
 
 header{
@@ -118,9 +143,9 @@ header{
 }
 
 .title img {
-    padding-top: 40px;
+    padding-top: 10px;
     margin-bottom: 0;
-    max-width: 550px;
+    max-width: 500px;
     width: 65%;
     min-height: 150px;
     background-position: center top;
