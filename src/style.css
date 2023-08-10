@@ -1,3 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family:'get-schwifty';
+    src:url("image/font/get_schwifty.ttf");
+}
+
 body {
     justify-content: center;
     align-items: center;
@@ -11,15 +22,18 @@ body {
 .menu {
     color: aliceblue;
     height: 760px;
-    width: 200px;
+    width: 250px;
     background-image: url("image/download.jpg");
     background-color: rgb(21, 255, 0);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     float: left;
-    position: relative; /* Define a posição do menu como referência para os pseudo-elementos */
+    font-family: "get-schwifty";
+    font-size: 25px;
+    font: rgb(21, 255, 0);;
 }
+
 
 .menu ul,
 .menu li {  /* Define a cor do texto como branca para as listas não ordenadas e os itens de lista */
@@ -37,6 +51,7 @@ color: white;
     position: absolute; /* Posiciona os riscos no canto superior direito */
     top: 15px;
     right: 10px;
+
 }
 
 /* Ajusta a posição do segundo traço */
@@ -64,12 +79,7 @@ input[type="text"]::placeholder {
     text-align: center;
 }
 
-@font-face {
-    font-family:'get-schwifty';
-    src:url("image/font/get_schwifty.ttf");
-}
-
-.row {
+.row-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -77,12 +87,13 @@ input[type="text"]::placeholder {
     margin: 0;/* Remove a margem padrão */
 }
 
-.card1, .card2, .card3 {
-    margin: 10px;
+.card1 img, .card2 img, .card3 img {
+    max-width: 200px;
+    margin: 50px;
     padding: 20px;
     font-family: "get-schwifty";
-    height: 450px;
-    width: 375px;
+    height: 260px;
+    /* width: 375px; */
     background-color: #44ff00;
     border-radius: 25px;
     font-size: 120%;/* Define o tamanho da fonte */
@@ -97,9 +108,21 @@ input[type="text"]::placeholder {
     height: 2.5rem;
 }
 
-.title {
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    margin: 0;
+
+}
+
+.title img {
+    padding-top: 40px;
+    margin-bottom: 0;
+    max-width: 550px;
     width: 65%;
-    height: 200px;
+    min-height: 150px;
     background-position: center top;
     background-attachment: fixed; /* Mantém a imagem de fundo fixa no topo */
 }
