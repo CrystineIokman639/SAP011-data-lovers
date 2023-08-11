@@ -80,7 +80,7 @@ body {
 .menu ul,
 .menu li { 
     color:#14d1d4ec;
-    -webkit-text-stroke: 0.1px;
+    -webkit-text-stroke: 0.8px;
     -webkit-text-stroke-color: rgb(186, 201, 20);
     text-align: center;
     margin-top: 10px;
@@ -89,7 +89,7 @@ body {
 
 .container {
     position: relative;
-    padding: 15px;
+    padding: 30px;
     max-width: 750px;
     margin: 0 auto;
     
@@ -130,10 +130,9 @@ body {
 
 .card1 img, .card2 img, .card3 img, .card4 img  {
     max-width: 200px;
-    padding: 20px;
+    padding: 15px;
     font-family: "get-schwifty";
     height: 260px;
-    width: 375px;
     background-color: #44ff00;
     border-radius: 25px;
     font-size: 120%;/* Define o tamanho da fonte */
@@ -141,7 +140,7 @@ body {
     z-index: 1;/* Define a hierarquia dos items (qual em cima de qual) */
     display: flex;
     flex-flow: row nowrap;
-    gap: 15px;
+    gap: 20px;
 }
 
 .footer {
@@ -169,4 +168,17 @@ header{
     min-height: 150px;
     background-position: center top;
     background-attachment: fixed; /* Mantém a imagem de fundo fixa no topo */
+}
+
+p{
+    color:#14d1d4ec;
+    -webkit-text-stroke: 0.3px;
+    -webkit-text-stroke-color: rgb(186, 201, 20);
+    text-align: right;
+}
+q{
+    color:#14d1d4ec;
+    -webkit-text-stroke: 0.3px;
+    -webkit-text-stroke-color: rgb(186, 201, 20);
+    text-align: right;
 }
