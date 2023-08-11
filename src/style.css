@@ -9,10 +9,16 @@
     src:url("image/font/get_schwifty.ttf");
 }
 
+h1{
+    text-align: center; /*alinha o texto "menu"*/
+}
+
 body {
+    height: 98vh;
     justify-content: center;
     align-items: center;
     background-image: url("image/fundo.gif");
+    background-position: center center;
     background-repeat: no-repeat;
     background-color: black;
     margin: 0; /* Remove a margem padrão */
@@ -22,7 +28,7 @@ body {
     color:#14d1d4ec;
     -webkit-text-stroke: 0.1px;
     -webkit-text-stroke-color: rgb(186, 201, 20);
-    height: 615px;
+    height: 100vh;;
     width: 210px;
     background-image: url("image/rick-and-morty.jpg");
     background-repeat: no-repeat;
@@ -33,39 +39,52 @@ body {
     font-size: 30px;
 }
 
+/* Estilo para o contêiner da caixa de busca */
+.container_de_busca {
+    position: relative; /* Define uma posição relativa para os elementos posicionados dentro */
+    display: inline-block; /* Torna o contêiner em bloco, mas ajustado ao tamanho do conteúdo */
+}
+
+/* Estilo para a caixa de texto de pesquisa */
+.procurar {
+    text-align: center;
+    color: rgb(209, 209, 209);
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgb(209, 209, 209);
+    background: transparent;
+    border-color: rgb(170, 170, 170);
+    border-radius: 10px;
+    outline: none; /* Remove o contorno ao clicar */
+    width: 150px;
+    height: 28px;
+    padding-right: 40px; /* Espaçamento à direita */
+}
+
+/* Estilo para o contêiner que envolve a caixa de texto e a imagem da lupa */
+.input-with-icon {
+    position: relative; /* Define uma posição relativa para os elementos posicionados dentro */
+}
+
+/* Estilo para o botão da imagem da lupa */
+.lupa-button {
+    position: absolute;
+    top: 50%; /* Alinha o topo do botão ao centro vertical */
+    right: 10px; 
+    transform: translateY(-25%); /* Move o botão metade de sua altura para cima, para centralizar verticalmente */
+    cursor: pointer; /* Mostra um cursor de ponteiro ao passar por cima */
+    background-color: transparent;
+    border: none; /* Remove a borda do botão */
+    padding: 0;
+}
 
 .menu ul,
-.menu li {  /* Define a cor do texto como branca para as listas não ordenadas e os itens de lista */
+.menu li { 
     color:#14d1d4ec;
     -webkit-text-stroke: 0.1px;
     -webkit-text-stroke-color: rgb(186, 201, 20);
     text-align: center;
     margin-top: 10px;
     font-size: 30px;
-}
-
-/* Estilizações para a caixa de busca */
-input[type="text"] {
-    /* Define a cor do texto e a cor de fundo */
-    color: rgb(9, 255, 0); /*texto*/
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: rgba(24, 27, 27, 0.737);
-    background-color: rgb(60, 255, 0); /*fundo*/
-    /* Define um raio de borda para arredondar os cantos */
-    border-radius: 10px;
-    /* Define a largura e altura da caixa de busca */
-    width: 150px;
-    height: 22px;
-    position: center;
-    font: black;
-}
-
-/* Estilizações para o texto de placeholder da caixa de busca */
-input[type="text"]::placeholder {
-    color: black; /* Define a cor do texto de placeholder */
-    font-style: oblique;  /* Define o estilo do texto como oblíquo e a fonte como mais pesada */
-    font-weight: bolder;
-    text-align: center;
 }
 
 .container {
