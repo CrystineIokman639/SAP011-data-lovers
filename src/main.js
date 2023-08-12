@@ -10,7 +10,7 @@ const arrowRight = document.querySelector('.arrow-right');
 
 arrowRight.addEventListener('click', function (e) {
     e.preventDefault();
-    if(page >= 1 && 493 <= page){
+    if(page >= 1){
     page += 1
     const thirdCard = page * 3;
     const secondCard = thirdCard - 1;
@@ -35,6 +35,8 @@ arrowRight.addEventListener('click', function (e) {
       
     </ul>
   </section>`
+ }else if(page = 493){
+  alert('Você já está no ultimo personagem 👀' );
  }
 });
 
