@@ -11,6 +11,7 @@
 
 h1{
     text-align: center; /*alinha o texto "menu"*/
+    font-size: 35px;
 }
 
 body {
@@ -28,9 +29,11 @@ body {
     color:#14d1d4ec;
     -webkit-text-stroke: 0.1px;
     -webkit-text-stroke-color: rgb(186, 201, 20);
-    height: 100vh;;
+    height: 100vh;
     width: 210px;
+    padding: 25px;
     background-image: url("image/rick-and-morty.jpg");
+    border: 7px groove rgb(186, 201, 20);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -84,7 +87,7 @@ body {
     -webkit-text-stroke-color: rgb(186, 201, 20);
     text-align: center;
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .container {
