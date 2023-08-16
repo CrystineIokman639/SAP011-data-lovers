@@ -3,17 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 @font-face {
     font-family:'get-schwifty';
     src:url("image/font/get_schwifty.ttf");
 }
-
 h1{
-    text-align: center; /*alinha o texto "menu"*/
+    text-align: center;
     font-size: 35px;
 }
-
 body {
     height: 98vh;
     justify-content: center;
@@ -24,7 +21,6 @@ body {
     background-color: black;
     margin: 0; /* Remove a margem padrão */
 }
-
 .menu {
     color:#14d1d4ec;
     -webkit-text-stroke: 0.1px;
@@ -41,13 +37,11 @@ body {
     font-family: "get-schwifty";
     font-size: 30px;
 }
-
 /* Estilo para o contêiner da caixa de busca */
 .container_de_busca {
     position: relative; /* Define uma posição relativa para os elementos posicionados dentro */
-    display: inline-block; /* Torna o contêiner em bloco, mas ajustado ao tamanho do conteúdo */
+    display: inline-block; /* Torna o contêiner em bloco, mais ajustado ao tamanho do conteúdo */
 }
-
 /* Estilo para a caixa de texto de pesquisa */
 .procurar {
     text-align: center;
@@ -62,26 +56,23 @@ body {
     height: 28px;
     padding-right: 40px; /* Espaçamento à direita */
 }
-
 /* Estilo para o contêiner que envolve a caixa de texto e a imagem da lupa */
 .input-with-icon {
     position: relative; /* Define uma posição relativa para os elementos posicionados dentro */
 }
-
 /* Estilo para o botão da imagem da lupa */
 .lupa-button {
     position: absolute;
     top: 50%; /* Alinha o topo do botão ao centro vertical */
-    right: 10px; 
+    right: 10px;
     transform: translateY(-25%); /* Move o botão metade de sua altura para cima, para centralizar verticalmente */
     cursor: pointer; /* Mostra um cursor de ponteiro ao passar por cima */
     background-color: transparent;
     border: none; /* Remove a borda do botão */
     padding: 0;
 }
-
 .menu ul,
-.menu li { 
+.menu li {
     color:#14d1d4ec;
     -webkit-text-stroke: 0.8px;
     -webkit-text-stroke-color: rgb(186, 201, 20);
@@ -89,23 +80,17 @@ body {
     margin-top: 10px;
     font-size: 25px;
 }
-
 .container {
     position: relative;
     padding: 30px;
     max-width: 750px;
     margin: 0 auto;
-    
 }
-
-
 .row-wrapper {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    /* background-color: transparent; */
+    align-items: center; /* background-color: transparent; */
     overflow-x: auto;
-
 }
 .arrow-left,
 .arrow-right{
@@ -124,19 +109,17 @@ body {
     background: linear-gradient(to left, transparent 0%, rgb(209, 253, 15) 200%);
     border-radius: 25px;
 }
-
 .arrow-right{
     left:auto;
     right:0;
     background: linear-gradient(to right, transparent 0%, green 200%);
 }
-
 .card1 img, .card2 img, .card3 img, .card4 img  {
     max-width: 200px;
     padding: 15px;
     font-family: "get-schwifty";
     height: 260px;
-    background-color: #44ff00;
+    background-color: #44FF00;
     border-radius: 25px;
     font-size: 120%;/* Define o tamanho da fonte */
     position: relative; /* Define a posição relativa para z-index */
@@ -145,7 +128,6 @@ body {
     flex-flow: row nowrap;
     gap: 20px;
 }
-
 .footer {
     position: absolute;
     bottom: 0;
@@ -153,16 +135,13 @@ body {
     height: 2.5rem;
     color:#44ff00
 }
-
 header{
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: transparent;
     margin: 0;
-
 }
-
 .title img {
     padding-top: 10px;
     margin-bottom: 0;
@@ -172,7 +151,6 @@ header{
     background-position: center top;
     background-attachment: fixed; /* Mantém a imagem de fundo fixa no topo */
 }
-
 p{
     color:#14d1d4ec;
     -webkit-text-stroke: 0.3px;

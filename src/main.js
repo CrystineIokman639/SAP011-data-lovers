@@ -35,7 +35,7 @@ arrowRight.addEventListener('click', function (e) {
       
     </ul>
   </section>`
- }else if(page = 493){
+ }else if(page = 164){  //164.3333333
   alert('Você já está no ultimo personagem 👀' );
  }
 });
@@ -70,4 +70,13 @@ arrowLeft.addEventListener('click', function (e) {
 }else{
   alert('Você já está no primeiro personagem 👀');
 }
+});
+
+const specie = document.getElementById("species");
+
+
+specie.addEventListener('click', function (e) {
+  e.preventDefault();
+   
+  alert("Clicou em especie");
 });
