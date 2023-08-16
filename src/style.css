@@ -10,7 +10,7 @@
 }
 
 h1{
-    text-align: center; /*alinha o texto "menu"*/
+    text-align: center;
     font-size: 35px;
 }
 
@@ -45,7 +45,7 @@ body {
 /* Estilo para o contêiner da caixa de busca */
 .container_de_busca {
     position: relative; /* Define uma posição relativa para os elementos posicionados dentro */
-    display: inline-block; /* Torna o contêiner em bloco, mas ajustado ao tamanho do conteúdo */
+    display: inline-block; /* Torna o contêiner em bloco, mais ajustado ao tamanho do conteúdo */
 }
 
 /* Estilo para a caixa de texto de pesquisa */
@@ -102,8 +102,7 @@ body {
 .row-wrapper {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    /* background-color: transparent; */
+    align-items: center; /* background-color: transparent; */
     overflow-x: auto;
 
 }
