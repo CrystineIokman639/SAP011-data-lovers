@@ -1,8 +1,9 @@
-import { example } from './data.js';
+
+import { filterEspecies } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+console.log(data);
 
 let page = 1;          //contador
 const arrowLeft = document.querySelector('.arrow-left'); //pega o elemento (css) 'se usar . pega a classe # pega o ID'
@@ -77,6 +78,34 @@ const specie = document.getElementById("species");
 
 specie.addEventListener('click', function (e) {
   e.preventDefault();
+
    
-  alert("Clicou em especie");
+  console.log(filterEspecies(data.results));
+});
+
+const status = document.getElementById("status");
+
+
+status.addEventListener('click', function (e) {
+  e.preventDefault();
+   
+  console.log("Clicou em estado de vida");
+});
+
+const gender = document.getElementById("gender");
+
+
+gender.addEventListener('click', function (e) {
+  e.preventDefault();
+   
+  alert("Clicou em genero");
+});
+
+const origin = document.getElementById("origin");
+
+
+origin.addEventListener('click', function (e) {
+  e.preventDefault();
+   
+  alert("Clicou em planeta");
 });

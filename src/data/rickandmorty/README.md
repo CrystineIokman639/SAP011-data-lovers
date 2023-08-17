@@ -39,4 +39,27 @@ serie.
   - Lista de personajes que pertenecen a una cierta locación.
   - Todos los personajes de la serie.
 
-
+Especie = ["Human", "Alien", "robot", "Humanoid", "Unknown",
+"Poopybutthole", "Mytholog", "Animal", "Vampire",
+"Cronenberg", "Disease", "Parasite"];
+Status = ["alive", "dead", "unknown$"];
+Gender = ["Male$", "Female", "Unknown"];
+Origin = ["Abadango", "unknown", "Signus 5 Expanse",
+  "Purge Planet", Venzenulon 7, Bepis 9, "Earth (Evil Rick's Target Dimension)",
+  "Nuptia 4", "Fantasy World", "Bird World", "Gromflom Prime",
+  "Rick's Battery Microverse", "The Menagerie", "Hideout Planet",
+  "Giant's Town", "Unity's Planet", "Anatomy Park", "Roy: A Life Well Lived",
+  "Eric Stoltz Mask Earth", "Glaagablaaga", "Gazorpazorp", "Resort Planet",
+  "Hamster in Butt World", "Alphabetrium", "Unity's Planet", "Krootabulon", "Pluto",
+  "Fantasy World", "Zeep Xanflorp's Miniverse", "Dorian 5", "Larva Alien's Planet",
+  "Mr. Goldenfold's dream", "Mr. Meeseeks Box", "Mega Gargantuan Kingdom",
+  "Gear World", "Planet Squanch", "Worldender's lair", "Zeep Xanflorp's Miniverse",
+  "Detoxifier", "Krootabulon", "Kyle's Teenyverse, Trunk World",
+  "Plopstar", "Rick's Battery Microverse", "Girvonesk", "Snuffles' Dream",
+  "Interdimensional Cable", "Greasy Grandma World", "Testicle Monster Dimension",
+  "Gear World", "Árboles Mentirosos", "Citadel of Ricks", "Abadango"];
+  origin.push(["Earth (C-137)", "Earth (C-500A)", "Earth (5-126)",
+  "Earth (Unknown dimension)", "Earth (K-83)", "Earth (K-22)", "Earth (D-99)",
+  "Earth (D716)", "Earth (D716-B)", "Earth (D716-C)", "Earth (J-22)",
+  "Earth (Phone Dimension)", "Earth (Chair Dimension)", "Earth (Replacement Dimension)",
+  "Earth (Pizza Dimension)", "Earth (J19ζ7)", "Post-Apocalyptic Earth","Earth (Giant Telepathic Spiders Dimension)"]);
