@@ -13,8 +13,8 @@ h1{
 }
 body {
     height: 98vh;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* problema? */
+    align-items: center; /* problema? */
     background-image: url("image/fundo.gif");
     background-position: center center;
     background-repeat: no-repeat;
@@ -114,6 +114,30 @@ body {
     right:0;
     background: linear-gradient(to right, transparent 0%, green 200%);
 }
+
+.card1:hover .flipper{
+	transform: rotateY(180deg);
+}
+
+.flipper{
+	width: 100%;
+	height: 100%;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back{
+    /* position: absolute; ta aqui o problemaaa */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+.back{
+	transform: rotateY(180deg);
+}
+
 .card1 img, .card2 img, .card3 img, .card4 img  {
     max-width: 200px;
     padding: 15px;
