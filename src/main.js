@@ -1,9 +1,25 @@
 
+import { test } from 'picomatch';
 import { filterEspecies } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(data);
+
+const verse = document.querySelector('.card1');
+const infoVerse = document.querySelector('.back');
+verse.addEventListener('mouseenter', enter)
+ function enter(){
+ infoVerse.innerHTML=`<img src="image/verse.jpg"
+ alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+ <li id="name1">Nome:${'test'}</li>
+ <li id="status1">STATUS</li>
+ <li id="spicies1">Especie</li>
+ <li id="gender1">Genero</li>
+ <li id="origin1">Origen</li>
+ <li id="code1">1</li>
+ </section>`
+ };
 
 let page = 1;          //contador
 const arrowLeft = document.querySelector('.arrow-left'); //pega o elemento (css) 'se usar . pega a classe # pega o ID'

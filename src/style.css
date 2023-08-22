@@ -25,11 +25,11 @@ body {
     color:#14d1d4ec;
     -webkit-text-stroke: 0.1px;
     -webkit-text-stroke-color: rgb(186, 201, 20);
+    border-right: 25px yellowgreen;
     height: 100vh;
     width: 210px;
     padding: 25px;
     background-image: url("image/rick-and-morty.jpg");
-    border: 7px groove rgb(186, 201, 20);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -72,7 +72,7 @@ body {
     padding: 0;
 }
 .menu ul,
-.menu li {
+.menu p {
     color:#14d1d4ec;
     -webkit-text-stroke: 0.8px;
     -webkit-text-stroke-color: rgb(186, 201, 20);
@@ -85,12 +85,14 @@ body {
     padding: 30px;
     max-width: 750px;
     margin: 0 auto;
+    /* da */
 }
 .row-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center; /* background-color: transparent; */
     overflow-x: auto;
+    /* background-color:rgb(255, 2, 78); */
 }
 .arrow-left,
 .arrow-right{
@@ -114,30 +116,33 @@ body {
     right:0;
     background: linear-gradient(to right, transparent 0%, green 200%);
 }
+.card1:hover .flipper, .card2:hover .flipper, .card3:hover .flipper{
+    transform: rotateY(180deg);
+}
 
-.card1:hover .flipper{
-	transform: rotateY(180deg);
+.card1, .card2, .card3{
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
 }
 
 .flipper{
-	width: 100%;
-	height: 100%;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
     position: relative;
+    /* background-color: purple; */
 }
-
 .front, .back{
-    /* position: absolute; ta aqui o problemaaa */
+    position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
   }
-  
 .back{
-	transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
-
 .card1 img, .card2 img, .card3 img, .card4 img  {
     max-width: 200px;
     padding: 15px;
@@ -146,8 +151,6 @@ body {
     background-color: #44FF00;
     border-radius: 25px;
     font-size: 120%;/* Define o tamanho da fonte */
-    position: relative; /* Define a posição relativa para z-index */
-    z-index: 1;/* Define a hierarquia dos items (qual em cima de qual) */
     display: flex;
     flex-flow: row nowrap;
     gap: 20px;

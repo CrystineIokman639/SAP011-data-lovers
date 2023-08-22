@@ -1,61 +1,54 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Rick and Morty</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <section class="menu">
     <h1>Menu</h1>
     <section>
       <section class="container_de_busca">
         <section class="input-with-icon">
-          <input type="text" class="procurar" name="pesquisar" placeholder="BUSCAR">
+          <input type="text" class="procurar" name="pesquisar" placeholder="BUSCAR" autocomplete="off">
           <button type="submit" class="lupa-button">
             <img src="image/lupa.svg" alt="lupa" height="15" width="15"> <!--svg, alt -->
           </button>
         </section>
       </section>
     </section>
-    <ul>
-      <li>Todos</li>
-      <li id="species">especie</li>
-      <li id="status">estado de vida</li>
-      <li id="gender">genero</li>
-      <li id="origin">planeta</li>
-    </ul>
+      <p>Todos</p>
+      <p id="species">especie</p>
+      <p id="status">estado de vida</p>
+      <p id="gender">genero</p>
+      <p id="origin">planeta</p>
   </section>
   <header>
     <Section class="title"><img src="image/Rick-And-Morty-Logo.png"></Section>
   </header>
   <main>
-  <section class = "container">
-    <button class="arrow-left" aria-label="previous image">&#9664;</button>
-    <button class="arrow-right" aria-label="next-image">&#9654;</button>
-    <section class="row-wrapper">
-      <section class="card1">
-        <ul>
-          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/1.jpeg" class="item current-item">
-          <!-- <li id="name1">Nome</li>
-          <li id="status1">STATUS</li>
-          <li id="spicies1">Especie</li>
-          <li id="gender1">Genero</li>
-          <li id="origin1">Origen</li>
-          <li id="code1">1</li> -->
-        </ul>
-      </section>
-      <section class="card2">
-        <ul>
-          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/2.jpeg" class="item current-item">
-          <!-- <li id="name2">Nome</li>
-          <li id="status2">STATUS</li>
-          <li id="spicies2">Especie</li>
-          <li id="gender2">Genero</li>
-          <li id="origin2">Origen</li>
-          <li id="code2">2</li> -->
+    <section class="container">
+      <button class="arrow-left" aria-label="previous image">&#9664;</button>
+      <button class="arrow-right" aria-label="next-image">&#9654;</button>
+      <section class="row-wrapper">
+        <section class="card1">
+          <section class="flipper">
+            <section class="front">
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/1.jpeg"
+                class="item current-item">
+            </section> <!-- front -->
+            <section class="back">
+              <img src="image/verse.jpg"
+                alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+            </section> <!-- back -->
+          </section> <!-- flipper -->
+        </section> <!-- card1 -->
+        <section class="card2">
+          <section class="flipper">
+            <section class="front">
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/2.jpeg"
+                class="item current-item">
             </section> <!-- front -->
             <section class="back">
               <img src="image/verse.jpg"
@@ -63,28 +56,21 @@
             </section> <!-- back -->
           </section> <!-- flipper -->
         </section> <!-- card2 -->
+        <section class="card3">
+          <section class="flipper">
+            <section class="front">
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/3.jpeg"
+                class="item current-item">
+            </section> <!-- front -->
+            <section class="back">
+              <img src="image/verse.jpg"
+                alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+            </section> <!-- back -->
+          </section> <!-- flipper -->
+        </section> <!-- card3 -->
       </section>
-      <section class="card3">
-        <section class="flipper">
-          <section class="front">
-            <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/3.jpeg"
-              class="item current-item">
-            <!-- <li id="name3">Nome</li>
-          <li id="status3">STATUS</li>
-          <li id="spicies3">Especie</li>
-          <li id="gender3">Genero</li>
-          <li id="origin3">Origen</li>
-          <li id="code3">3</li> -->
-          </section> <!-- front -->
-          <section class="back">
-            <img src="image/verse.jpg"
-              alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
-          </section> <!-- back -->
-        </section> <!-- flipper -->
-      </section> <!-- card3 -->
     </section>
   </main>
- 
   </section>
   <footer class="footer">
     <p>&copy;Crys & Leth</p>
@@ -93,5 +79,4 @@
   </footer>
   <script src="main.js" type="module"></script>
 </body>
-
 </html>
