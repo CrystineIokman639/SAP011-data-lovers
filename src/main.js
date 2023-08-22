@@ -76,27 +76,25 @@ arrowLeft.addEventListener('click', function (e) {
 const specie = document.getElementById("species");
 page = 1
 
+
 specie.addEventListener('click', function (e) {
   e.preventDefault();
+  console.log(page);
+  console.log(filterEspecies(data.results, "Human"));
   // const newSize = data.resultsHuman.length -1
   if (page >= 1) {
-    page += 1
     const thirdCard = (page * 3) - 1;
     const secondCard = thirdCard - 1;
     const firstCard = secondCard - 1;
     const humans = filterEspecies(data.results, "Human");
     const alien = filterEspecies(data.results, "Alien");
-  
+    page += 1
+    console.log(humans);
     document.querySelector('.one').innerHTML = `
-      <style>
-      .2{
-      position:relative;     
-      }
-      </style>
         <section id="1" class = "container">
-        <button id="1" class="arrow-left" aria-label="previous image">&#9664;</button>
-        <button id="1" class="arrow-right" aria-label="next-image">&#9654;</button>
-        <section id="1" class="row-wrapper">
+        <button id="humanL" class="arrow-left" aria-label="previous image">&#9664;</button>
+        <button id="humanR" class="arrow-right" aria-label="next-image">&#9654;</button>
+        <section id="row1" class="row-wrapper">
         <section id="1" class="card1">
           <ul>
           <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[firstCard].id}.jpeg" class="item current-item">
@@ -114,13 +112,11 @@ specie.addEventListener('click', function (e) {
         </section>
         </section>
         </section>
-        
-      
         <main class ="two">
         <section id="2" class = "container">
-        <button id="2" class="arrow-left" aria-label="previous image">&#9664;</button>
-        <button id="2" class="arrow-right" aria-label="next-image">&#9654;</button>
-        <section id="2" class="row-wrapper">
+        <button id="alien" class="arrow-left" aria-label="previous image">&#9664;</button>
+        <button id="alien" class="arrow-right" aria-label="next-image">&#9654;</button>
+        <section id="row2" class="row-wrapper">
         <section id="2" class="card1">
           <ul>
           <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${alien[firstCard].id}.jpeg" class="item current-item">
@@ -139,9 +135,67 @@ specie.addEventListener('click', function (e) {
       </section>
     </section>
     </main>`
-  } else if (page = 81) {  //164.3333333
-    alert('Você já está no ultimo personagem 👀');
   }
+  const arrowLeftHuman = document.querySelector('#humanL'); //esquerda
+  arrowLeftHuman.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (page > 1) {
+      const thirdCard = page * 3;
+      const secondCard = thirdCard - 1;
+      const firstCard = secondCard - 1;
+      page -= 1;
+      const humans = filterEspecies(data.results, "Human");
+  
+      document.querySelector('#row1').innerHTML = `
+      <section id="1" class="card1">
+          <ul>
+          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[firstCard].id}.jpeg" class="item current-item">
+          </ul>
+        </section>
+        <section class="card2">
+          <ul>
+          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[secondCard].id}.jpeg" class="item current-item">
+          </ul>
+        </section>
+        <section class="card3">
+          <ul>
+          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[thirdCard].id}.jpeg" class="item current-item">
+          </ul>
+        </section>`
+    } else if (page = 81) {  //164.3333333
+      alert('Você já está no primeiro personagem 👀');
+    }
+    });
+  
+    const arrowRightHuman = document.querySelector('#humanR');
+  arrowRightHuman.addEventListener('click', function (e) {
+      e.preventDefault();
+      const humans = filterEspecies(data.results, "Human");
+      if (page >= 1) {
+        const thirdCard = (page * 3) - 1;
+        const secondCard = thirdCard - 1;
+        const firstCard = secondCard - 1;
+        page += 1
+        document.querySelector('#row1').innerHTML = `
+        <section id="1" class="card1">
+          <ul>
+          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[firstCard].id}.jpeg" class="item current-item">
+          </ul>
+        </section>
+        <section class="card2">
+          <ul>
+          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[secondCard].id}.jpeg" class="item current-item">
+          </ul>
+        </section>
+        <section class="card3">
+          <ul>
+          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[thirdCard].id}.jpeg" class="item current-item">
+          </ul>
+        </section>`
+      } else if (page = 164) {  //164.3333333
+        alert('Você já está no ultimo personagem 👀');
+      }
+  });
 });
 
 
