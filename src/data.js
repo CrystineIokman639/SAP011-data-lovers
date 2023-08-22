@@ -1,8 +1,8 @@
 // estas funciones son de ejemplo
 
 export const filterEspecies = (results, specie) => {
-  const resultsHuman = results.filter((itens) =>{ return itens.species === specie});
-  return resultsHuman;
+  const resultsSpecies = results.filter((itens) =>{ return itens.species === specie});
+  return resultsSpecies;
 
 };
 
