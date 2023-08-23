@@ -3,24 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family:'get-schwifty';
     src:url("image/font/get_schwifty.ttf");
 }
+
 h1{
     text-align: center;
     font-size: 35px;
 }
+
+/* h2{
+    text-align: left;
+    font-size: 45px;
+    font-family: 'get-schwifty';
+    color: #000000;
+    -webkit-text-stroke: 0.1px;
+    -webkit-text-stroke-color: rgb(46, 255, 4);
+} */
+
 body {
     height: 98vh;
-    justify-content: center; /* problema? */
-    align-items: center; /* problema? */
+    justify-content: center;
+    align-items: center;
     background-image: url("image/fundo.gif");
     background-position: center center;
     background-repeat: no-repeat;
     background-color: black;
-    margin: 0; /* Remove a margem padrão */
+    margin: 0;
 }
+
 .menu {
     color:#14d1d4ec;
     -webkit-text-stroke: 0.1px;
@@ -37,11 +50,12 @@ body {
     font-family: "get-schwifty";
     font-size: 30px;
 }
-/* Estilo para o contêiner da caixa de busca */
+
 .container_de_busca {
     position: relative; /* Define uma posição relativa para os elementos posicionados dentro */
     display: inline-block; /* Torna o contêiner em bloco, mais ajustado ao tamanho do conteúdo */
 }
+
 /* Estilo para a caixa de texto de pesquisa */
 .procurar {
     text-align: center;
@@ -56,21 +70,24 @@ body {
     height: 28px;
     padding-right: 40px; /* Espaçamento à direita */
 }
+
 /* Estilo para o contêiner que envolve a caixa de texto e a imagem da lupa */
 .input-with-icon {
     position: relative; /* Define uma posição relativa para os elementos posicionados dentro */
 }
+
 /* Estilo para o botão da imagem da lupa */
 .lupa-button {
     position: absolute;
     top: 50%; /* Alinha o topo do botão ao centro vertical */
     right: 10px;
     transform: translateY(-25%); /* Move o botão metade de sua altura para cima, para centralizar verticalmente */
-    cursor: pointer; /* Mostra um cursor de ponteiro ao passar por cima */
+    cursor: pointer; 
     background-color: transparent;
     border: none; /* Remove a borda do botão */
     padding: 0;
 }
+
 .menu ul,
 .menu p {
     color:#14d1d4ec;
@@ -80,20 +97,30 @@ body {
     margin-top: 10px;
     font-size: 25px;
 }
+
+.main{
+    margin: 0;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+}
+
 .container {
     position: relative;
     padding: 30px;
     max-width: 750px;
     margin: 0 auto;
-    /* da */
+    /* background-color: rgb(103, 168, 199); */
 }
+
 .row-wrapper {
     display: flex;
     justify-content: space-around;
-    align-items: center; /* background-color: transparent; */
-    overflow-x: auto;
-    /* background-color:rgb(255, 2, 78); */
+    align-items: center;
+    /* overflow-x: auto; tava cortando os cards, pois o lugar que exibe eles ta bugado*/
+    /* background-color: rgb(0, 225, 255); */
 }
+
 .arrow-left,
 .arrow-right{
     position: absolute;
@@ -110,12 +137,15 @@ body {
     border:none;
     background: linear-gradient(to left, transparent 0%, rgb(209, 253, 15) 200%);
     border-radius: 25px;
+    /* background-color: rgb(0, 196, 147); */
 }
+
 .arrow-right{
     left:auto;
     right:0;
     background: linear-gradient(to right, transparent 0%, green 200%);
 }
+
 .card1:hover .flipper, .card2:hover .flipper, .card3:hover .flipper{
     transform: rotateY(180deg);
 }
@@ -124,6 +154,7 @@ body {
     width: 300px;
     height: 200px;
     perspective: 1000px;
+    /* background-color: rgb(255, 162, 255); */
 }
 
 .flipper{
@@ -132,17 +163,21 @@ body {
     transition: transform 0.8s;
     transform-style: preserve-3d;
     position: relative;
-    /* background-color: purple; */
+    /* background-color: rgb(238, 0, 238); */
 }
+
 .front, .back{
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    /* background-color: purple; */
   }
+
 .back{
     transform: rotateY(180deg);
 }
+
 .card1 img, .card2 img, .card3 img, .card4 img  {
     max-width: 200px;
     padding: 15px;
@@ -155,6 +190,7 @@ body {
     flex-flow: row nowrap;
     gap: 20px;
 }
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -162,6 +198,7 @@ body {
     height: 2.5rem;
     color:#44ff00
 }
+
 header{
     display: flex;
     justify-content: space-around;
@@ -169,6 +206,7 @@ header{
     background-color: transparent;
     margin: 0;
 }
+
 .title img {
     padding-top: 10px;
     margin-bottom: 0;
@@ -178,12 +216,14 @@ header{
     background-position: center top;
     background-attachment: fixed; /* Mantém a imagem de fundo fixa no topo */
 }
+
 p{
     color:#14d1d4ec;
     -webkit-text-stroke: 0.3px;
     -webkit-text-stroke-color: rgb(186, 201, 20);
     text-align: right;
 }
+
 q{
     color:#14d1d4ec;
     -webkit-text-stroke: 0.3px;

@@ -171,7 +171,7 @@ specie.addEventListener('click', function (e) {
     </main>
     `
   };
-      function createCarouselFilter(page, humans){
+      function carouselHumanFilter(page, humans){
         if (page >= 1){
           const thirdCard = (page * 3) -1;
           const secondCard = thirdCard - 1;
@@ -205,13 +205,56 @@ specie.addEventListener('click', function (e) {
       arrowLeftHuman.addEventListener('click', function (e) {
       e.preventDefault();
       page -= 1;
-      createCarouselFilter(page, humans);
+      carouselHumanFilter(page, humans);
       });
 
       arrowRightHuman.addEventListener('click', function (e) {
       e.preventDefault();
       page += 1;
-      createCarouselFilter(page, humans);
+      carouselHumanFilter(page, humans);
+      });
+
+      function carouselAlienFilter(page, alien){
+        if (page >= 1){
+          const thirdCard = (page * 3) -1;
+          const secondCard = thirdCard - 1;
+          const firstCard = secondCard - 1;
+          document.querySelector('#row2').innerHTML = `
+          <section id="1" class="card1">
+              <ul>
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${alien[firstCard].id}.jpeg" class="item current-item">
+              </ul>
+            </section>
+            <section class="card2">
+              <ul>
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${alien[secondCard].id}.jpeg" class="item current-item">
+              </ul>
+            </section>
+            <section class="card3">
+              <ul>
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${alien[thirdCard].id}.jpeg" class="item current-item">
+              </ul>
+            </section>`
+          }else if(thirdCard == alien.length -1){  
+              alert('Você já está no ultimo personagem 👀');
+            }else if(page <= 1){
+              alert('Você já está no primeiro personagem 👀');
+            };
+    };
+
+    const arrowLeftAlien = document.querySelector('#alienL');
+    const arrowRightAlien = document.querySelector('#alienR');
+
+    arrowLeftAlien.addEventListener('click', function (e) {
+      e.preventDefault();
+      page -= 1;
+      carouselAlienFilter(page, alien);
+      });
+
+      arrowRightAlien.addEventListener('click', function (e) {
+      e.preventDefault();
+      page += 1;
+      carouselAlienFilter(page, alien);
       });
 
 });
