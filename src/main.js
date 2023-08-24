@@ -1,4 +1,5 @@
 
+import { first } from 'lodash';
 import { filterEspecies } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
@@ -29,10 +30,7 @@ function createCarouselPage(page){
   const firstCard = secondCard - 1;
   console.log(page, firstCard, secondCard,thirdCard);
   if (page >= 1) {
-    document.querySelector('.container').innerHTML = `
-      <button class="arrow-left" aria-label="previous image">&#9664;</button>
-      <button class="arrow-right" aria-label="next-image">&#9654;</button>
-      <section class="row-wrapper">
+    document.querySelector('.row-wrapper').innerHTML = `
         <section class="card1">
           <section class="flipper">
             <section class="front">
@@ -69,8 +67,7 @@ function createCarouselPage(page){
             </section> <!-- back -->
           </section> <!-- flipper -->
         </section> <!-- card3 -->
-      </section>
-    </section>`
+      </section>`
   }else if (thirdCard == data.results.length-1){  
     alert('Você já está no ultimo personagem 👀');
   }else if (page <= 1 ){
@@ -81,6 +78,7 @@ function createCarouselPage(page){
 arrowRight.addEventListener('click', function (e) {
   e.preventDefault();
   page += 1;
+  console.log(page);
   createCarouselPage(page);
 });
 
@@ -96,6 +94,50 @@ const alien = filterEspecies(data.results, "Alien");
 const robot = filterEspecies(data.results, "Robot");
 const humanoid = filterEspecies(data.results, "Humanoid");
 
+function innerHTMLCarousel(firstID, secondID, thirdID){
+  return `<section id="1" class = "container">
+  <button id="humanL" class="arrow-left" aria-label="previous image">&#9664;</button>
+  <button id="humanR" class="arrow-right" aria-label="next-image">&#9654;</button>
+  <section id="row1" class="row-wrapper">
+  <section class="card1">
+    <section class="flipper">
+      <section class="front">
+        <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${firstID}.jpeg"
+          class="item current-item">
+      </section> <!-- front -->
+      <section class="back">
+        <img src="image/verse.jpg"
+          alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+      </section> <!-- back -->
+    </section> <!-- flipper -->
+  </section> <!-- card1 -->
+  <section class="card2">
+    <section class="flipper">
+      <section class="front">
+        <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${secondID}.jpeg"
+          class="item current-item">
+      </section> <!-- front -->
+      <section class="back">
+        <img src="image/verse.jpg"
+          alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+      </section> <!-- back -->
+    </section> <!-- flipper -->
+  </section> <!-- card2 -->
+  <section class="card3">
+    <section class="flipper">
+      <section class="front">
+        <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${thirdID}.jpeg"
+          class="item current-item">
+      </section> <!-- front -->
+      <section class="back">
+        <img src="image/verse.jpg"
+          alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+      </section> <!-- back -->
+    </section> <!-- flipper -->
+  </section> <!-- card3 -->
+</section>`
+}
+
 specie.addEventListener('click', function (e) {
   e.preventDefault();
   if (page >= 1) {
@@ -108,25 +150,47 @@ specie.addEventListener('click', function (e) {
         <button id="humanL" class="arrow-left" aria-label="previous image">&#9664;</button>
         <button id="humanR" class="arrow-right" aria-label="next-image">&#9654;</button>
         <section id="row1" class="row-wrapper">
-        <section id="1" class="card1">
-          <ul>
-          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[firstCard].id}.jpeg" class="item current-item">
-          </ul>
-        </section>
+        <section class="card1">
+          <section class="flipper">
+            <section class="front">
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[firstCard].id}.jpeg"
+                class="item current-item">
+            </section> <!-- front -->
+            <section class="back">
+              <img src="image/verse.jpg"
+                alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+            </section> <!-- back -->
+          </section> <!-- flipper -->
+        </section> <!-- card1 -->
         <section class="card2">
-          <ul>
-          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[secondCard].id}.jpeg" class="item current-item">
-          </ul>
-        </section>
+          <section class="flipper">
+            <section class="front">
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[secondCard].id}.jpeg"
+                class="item current-item">
+            </section> <!-- front -->
+            <section class="back">
+              <img src="image/verse.jpg"
+                alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+            </section> <!-- back -->
+          </section> <!-- flipper -->
+        </section> <!-- card2 -->
         <section class="card3">
-          <ul>
-          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[thirdCard].id}.jpeg" class="item current-item">
-          </ul>
-        </section>
-        </section>
+          <section class="flipper">
+            <section class="front">
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${humans[thirdCard].id}.jpeg"
+                class="item current-item">
+            </section> <!-- front -->
+            <section class="back">
+              <img src="image/verse.jpg"
+                alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+            </section> <!-- back -->
+          </section> <!-- flipper -->
+        </section> <!-- card3 -->
+      </section>
+
         </section>
         <main class ="two">
-        <section id="2" class = "container">
+        <section class = "container">
         <button id="alienL" class="arrow-left" aria-label="previous image">&#9664;</button>
         <button id="alienR" class="arrow-right" aria-label="next-image">&#9654;</button>
         <section id="row2" class="row-wrapper">
