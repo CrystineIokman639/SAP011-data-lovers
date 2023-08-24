@@ -66,3 +66,48 @@ Origin = ["Abadango", "unknown", "Signus 5 Expanse",
 
     
 
+
+
+
+<section class="container">
+      <button class="arrow-left" aria-label="previous image">&#9664;</button>
+      <button class="arrow-right" aria-label="next-image">&#9654;</button>
+      <section class="row-wrapper">
+        <section class="card1">
+          <section class="flipper">
+            <section class="front">
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${data.results[firstCard].id}.jpeg"
+                class="item current-item">
+            </section> <!-- front -->
+            <section class="back">
+              <img src="image/verse.jpg"
+                alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+            </section> <!-- back -->
+          </section> <!-- flipper -->
+        </section> <!-- card1 -->
+        <section class="card2">
+          <section class="flipper">
+            <section class="front">
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${data.results[secondCard].id}.jpeg"
+                class="item current-item">
+            </section> <!-- front -->
+            <section class="back">
+              <img src="image/verse.jpg"
+                alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+            </section> <!-- back -->
+          </section> <!-- flipper -->
+        </section> <!-- card2 -->
+        <section class="card3">
+          <section class="flipper">
+            <section class="front">
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${data.results[thirdCard].id}.jpeg"
+                class="item current-item">
+            </section> <!-- front -->
+            <section class="back">
+              <img src="image/verse.jpg"
+                alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+            </section> <!-- back -->
+          </section> <!-- flipper -->
+        </section> <!-- card3 -->
+      </section>
+    </section>

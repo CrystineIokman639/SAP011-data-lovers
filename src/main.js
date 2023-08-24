@@ -27,26 +27,50 @@ function createCarouselPage(page){
   const thirdCard = (page * 3) - 1;
   const secondCard = thirdCard - 1;
   const firstCard = secondCard - 1;
+  console.log(page, firstCard, secondCard,thirdCard);
   if (page >= 1) {
-    document.querySelector('.row-wrapper').innerHTML = `
-    <section class="card1">
-    <ul>
-      <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${data.results[firstCard].id}.jpeg" class="item current-item">
-      
-    </ul>
-  </section>
-  <section class="card2">
-    <ul>
-      <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${data.results[secondCard].id}.jpeg" class="item current-item">
-      
-    </ul>
-  </section>
-  <section class="card3">
-    <ul>
-      <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${data.results[thirdCard].id}.jpeg" class="item current-item">
-      
-    </ul>
-  </section>`
+    document.querySelector('.container').innerHTML = `
+      <button class="arrow-left" aria-label="previous image">&#9664;</button>
+      <button class="arrow-right" aria-label="next-image">&#9654;</button>
+      <section class="row-wrapper">
+        <section class="card1">
+          <section class="flipper">
+            <section class="front">
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${data.results[firstCard].id}.jpeg"
+                class="item current-item">
+            </section> <!-- front -->
+            <section class="back">
+              <img src="image/verse.jpg"
+                alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+            </section> <!-- back -->
+          </section> <!-- flipper -->
+        </section> <!-- card1 -->
+        <section class="card2">
+          <section class="flipper">
+            <section class="front">
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${data.results[secondCard].id}.jpeg"
+                class="item current-item">
+            </section> <!-- front -->
+            <section class="back">
+              <img src="image/verse.jpg"
+                alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+            </section> <!-- back -->
+          </section> <!-- flipper -->
+        </section> <!-- card2 -->
+        <section class="card3">
+          <section class="flipper">
+            <section class="front">
+              <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/${data.results[thirdCard].id}.jpeg"
+                class="item current-item">
+            </section> <!-- front -->
+            <section class="back">
+              <img src="image/verse.jpg"
+                alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
+            </section> <!-- back -->
+          </section> <!-- flipper -->
+        </section> <!-- card3 -->
+      </section>
+    </section>`
   }else if (thirdCard == data.results.length-1){  
     alert('Você já está no ultimo personagem 👀');
   }else if (page <= 1 ){
