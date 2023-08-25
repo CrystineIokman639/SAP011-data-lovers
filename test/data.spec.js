@@ -1,12 +1,12 @@
 import { example, anotherExample } from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('innerHTMLCard', () => {
+  it('should be a function', () => {
+    expect(typeof innerHTMLCard).toBe('function');
   });
 
-  it('returns `example`', () => {
+  it('should return a template string in HTML', () => {
     expect(example()).toBe('example');
   });
 });
