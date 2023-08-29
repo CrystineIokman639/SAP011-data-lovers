@@ -1,11 +1,22 @@
 
 import { filterEspecies } from './data.js';
-import { innerHTMLCarousel } from './data.js';
-import { carouselHumanFilter } from './data.js';
-import { createCarouselPage } from './data.js';
-import { carouselAlienFilter } from './data.js';
+import { orderByAlfa } from './data.js';
+import { innerHTMLCarousel } from './carousel.js';
+import { carouselHumanFilter } from './carousel.js';
+import { createCarouselPage } from './carousel.js';
+import { carouselAlienFilter } from './carousel.js';
+import { carouselOrderFilter } from './carousel.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
+// let menu = document.querySelector(".nav");
+// menu.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   menu.style.display = "block";
+//   if(menu.style.display == "block"){
+//     let newMenu = menu.style.display = "none";
+//   }
+//   return newMenu
+// });
 
 const verse = document.querySelector('.card1');
 const infoVerse = document.querySelector('.back');
@@ -25,6 +36,7 @@ verse.addEventListener('mouseenter', enter)
  };
 
 let pageA = 1;
+let pageO = 1;
 let pageAll = 1;
 let pageH = 1;
 let page = 1;
@@ -52,6 +64,37 @@ arrowLeft.addEventListener('click', function (e) {
   createCarouselPage(page, row, data.results[firstCard].id, data.results[secondCard].id, data.results[thirdCard].id);
 });
 
+const alpha = document.getElementById("order");
+const results = data.results;
+const ordened = orderByAlfa(results);
+
+alpha.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (page >= 1) {
+    const thirdCard = (pageO * 3) - 1;
+    const secondCard = thirdCard - 1;
+    const firstCard = secondCard - 1;
+    pageO += 1
+    const titleOrder = "A-Z:";
+   
+    document.querySelector('.one').innerHTML = innerHTMLCarousel(titleOrder,"row1", "orderL", "orderR", ordened[firstCard].id, ordened[secondCard].id, ordened[thirdCard].id);
+  };
+    const arrowLeftOrder = document.querySelector('#orderL');
+    const arrowRightOrder = document.querySelector('#orderR');
+      arrowLeftOrder.addEventListener('click', function (e) {
+      e.preventDefault();
+      pageO -= 1;
+      carouselOrderFilter(pageO, ordened);
+      });
+
+      arrowRightOrder.addEventListener('click', function (e) {
+      e.preventDefault();
+      pageO += 1;
+      carouselOrderFilter(pageO, ordened);
+      });
+
+});
+
 const specie = document.getElementById("species");
 const humans = filterEspecies(data.results, "Human");
 const alien = filterEspecies(data.results, "Alien");
@@ -65,10 +108,14 @@ specie.addEventListener('click', function (e) {
     const secondCard = thirdCard - 1;
     const firstCard = secondCard - 1;
     page += 1
-    document.querySelector('.one').innerHTML = innerHTMLCarousel("row1", "humanL", "humanR", humans[firstCard].id, humans[secondCard].id, humans[thirdCard].id);
-    document.querySelector('.one').innerHTML += innerHTMLCarousel("row2", "alienL", "alienR", alien[firstCard].id, alien[secondCard].id, alien[thirdCard].id);
-    document.querySelector('.one').innerHTML += innerHTMLCarousel("row3", "robotL", "robotR",robot[firstCard].id, robot[secondCard].id, robot[thirdCard].id);
-    document.querySelector('.one').innerHTML += innerHTMLCarousel("row4", "humanoidL", "humanoidR",humanoid[firstCard].id, humanoid[secondCard].id, humanoid[thirdCard].id);
+    const titleH = "humanos:";
+    const titleA = "Aliens:";
+    const titleR = "Robos:";
+    const titleHD = "Humanoides:";
+    document.querySelector('.one').innerHTML = innerHTMLCarousel(titleH,"row1", "humanL", "humanR", humans[firstCard].id, humans[secondCard].id, humans[thirdCard].id);
+    document.querySelector('.one').innerHTML += innerHTMLCarousel(titleA,"row2", "alienL", "alienR", alien[firstCard].id, alien[secondCard].id, alien[thirdCard].id);
+    document.querySelector('.one').innerHTML += innerHTMLCarousel(titleR,"row3", "robotL", "robotR",robot[firstCard].id, robot[secondCard].id, robot[thirdCard].id);
+    document.querySelector('.one').innerHTML += innerHTMLCarousel(titleHD,"row4", "humanoidL", "humanoidR",humanoid[firstCard].id, humanoid[secondCard].id, humanoid[thirdCard].id);
   };
     const arrowLeftHuman = document.querySelector('#humanL');
     const arrowRightHuman = document.querySelector('#humanR');

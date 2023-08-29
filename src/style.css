@@ -14,24 +14,71 @@ h1{
     font-size: 35px;
 }
 
-/* h2{
+h2{
     text-align: left;
     font-size: 45px;
     font-family: 'get-schwifty';
-    color: #000000;
+    color:#14d1d4ec;
     -webkit-text-stroke: 0.1px;
-    -webkit-text-stroke-color: rgb(46, 255, 4);
-} */
+    -webkit-text-stroke-color: rgb(186, 201, 20);
+    position: center;
+}
+h3{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'get-schwifty';
+    color:#14d1d4ec;
+    -webkit-text-stroke: 0.1px;
+    -webkit-text-stroke-color: rgb(186, 201, 20);
+    position: center;
+}
 
 body {
-    height: 98vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     background-image: url("image/fundo.gif");
-    background-position: center center;
+    background-position: right;
     background-repeat: no-repeat;
-    background-color: black;
-    margin: 0;
+    background-color: rgb(35, 35, 35);
+    padding: 0px;
+    position: bottom 100px;
+}
+
+
+#i:hover{
+    color: #14d1d4ec;
+    background-color: rgb(186, 201, 20);
+}
+
+.expand{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.expand > ion-icon{
+    background-color: #14d1d4ec;
+    color: rgb(186, 201, 20);
+    display: flex;
+    text-align: left;
+    padding: 30px 0 30px 1%;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.trans:hover{
+    background-color: rgba(249, 245, 35, 0.857);
+    transition: .2s;
+    border-radius: 45%;
+}
+
+nav{
+    box-shadow: 3px 0 0 rgb(33, 220, 8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* width: 2.1vw; */
+
 }
 
 .menu {
@@ -40,8 +87,8 @@ body {
     -webkit-text-stroke-color: rgb(186, 201, 20);
     border-right: 25px yellowgreen;
     height: 100vh;
-    width: 210px;
-    padding: 25px;
+    width: 15vw;
+    padding: 20px;
     background-image: url("image/rick-and-morty.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,6 +96,7 @@ body {
     float: left;
     font-family: "get-schwifty";
     font-size: 30px;
+    cursor: pointer;
 }
 
 .container_de_busca {
@@ -194,11 +242,14 @@ body {
 }
 
 .footer {
-    position: absolute;
+    position: absolute 10px;
     bottom: 0;
     width: 100%;
     height: 2.5rem;
-    color:#44ff00
+    color:#44ff00;
+    display: flex; 
+    align-items: ;
+    
 }
 
 header{
@@ -224,6 +275,7 @@ p{
     -webkit-text-stroke: 0.3px;
     -webkit-text-stroke-color: rgb(186, 201, 20);
     text-align: right;
+    
 }
 
 q{
