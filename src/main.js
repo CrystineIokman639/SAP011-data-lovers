@@ -1,5 +1,8 @@
 
 import { filterEspecies } from './data.js';
+import { filterStatus } from './data.js';
+import { filterOrigin } from './data.js';
+import { filterGender } from './data.js';
 import { orderByAlfa } from './data.js';
 import { innerHTMLCarousel } from './carousel.js';
 import { carouselHumanFilter } from './carousel.js';
@@ -133,6 +136,63 @@ specie.addEventListener('click', function (e) {
 
     const arrowLeftAlien = document.querySelector('#alienL');
     const arrowRightAlien = document.querySelector('#alienR');
+
+    arrowLeftAlien.addEventListener('click', function (e) {
+      e.preventDefault();
+      console.log("arrowLeftAlien");
+      pageA -= 1;
+      carouselAlienFilter(pageA, alien);
+      });
+
+      arrowRightAlien.addEventListener('click', function (e) {
+      e.preventDefault();
+      pageA += 1;
+      carouselAlienFilter(pageA, alien);
+      });
+
+});
+
+const status = document.getElementById("status");
+const alive = filterStatus(data.results, "Alive");
+const dead = filterStatus(data.results, "Dead");
+const unknow = filterStatus(data.results, "Unknow");
+
+let pageAlive = 1;
+let pageDead = 1;
+let pageUnknow = 1;
+
+status.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (pageAlive >= 1) {
+    const thirdCard = (page * 3) - 1;
+    const secondCard = thirdCard - 1;
+    const firstCard = secondCard - 1;
+    page += 1
+    const titleAlive = "Vivo:";
+    const titleDead = "Morto:";
+    const titleUnkwon = "Desconhecido:";
+    
+    document.querySelector('.one').innerHTML = innerHTMLCarousel(titleAlive,"row1", "aliveL", "aliveR", alive[firstCard].id, alive[secondCard].id, alive[thirdCard].id);
+    document.querySelector('.one').innerHTML += innerHTMLCarousel(titleDead,"row2", "deadL", "deadR", dead[firstCard].id, dead[secondCard].id, dead[thirdCard].id);
+    document.querySelector('.one').innerHTML += innerHTMLCarousel(titleUnkwon,"row3", "unknowL", "unknowR", unknow[firstCard].id, unknow[secondCard].id, unknow[thirdCard].id);
+    
+  };
+    const arrowLeftAlive = document.querySelector('#aliveL');
+    const arrowRightAlive = document.querySelector('#aliveR');
+      arrowLeftAlive.addEventListener('click', function (e) {
+      e.preventDefault();
+      pageAlive -= 1;
+      carouselHumanFilter(pageAlive, alive);
+      });
+
+      arrowRightAlive.addEventListener('click', function (e) {
+      e.preventDefault();
+      pageAlive += 1;
+      carouselHumanFilter(pageAlive, alive);
+      });
+
+    const arrowLeftDead = document.querySelector('#deadL');
+    const arrowRightDead = document.querySelector('#deadR');
 
     arrowLeftAlien.addEventListener('click', function (e) {
       e.preventDefault();

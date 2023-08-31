@@ -39,10 +39,11 @@ serie.
   - Lista de personajes que pertenecen a una cierta locación.
   - Todos los personajes de la serie.
 
-Especie = ["Human", "Alien", "robot", "Humanoid", "Unknown",
-"Poopybutthole", "Mytholog", "Animal", "Vampire",
+Especie = [, "Unknown","Poopybutthole", "Mytholog", "Animal", "Vampire",
 "Cronenberg", "Disease", "Parasite"];
-Status = ["alive", "dead", "unknown$"];
+
+Status = ["alive", "dead", "unknown"];
+
 Gender = ["Male$", "Female", "Unknown"];
 Origin = ["Abadango", "unknown", "Signus 5 Expanse",
   "Purge Planet", Venzenulon 7, Bepis 9, "Earth (Evil Rick's Target Dimension)",

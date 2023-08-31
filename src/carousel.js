@@ -101,5 +101,19 @@ function innerHTMLCard(firstid, secondid, thirdid) {
       alert('Você já está no primeiro personagem 👀');
     };
   };
+
+  export function carouselAliveFilter(pageAlive, alive) {
+    if (pageAlive >= 1) {
+      const thirdCard = (pageAlive * 3) - 1;
+      const secondCard = thirdCard - 1;
+      const firstCard = secondCard - 1;
+      const row1 = document.querySelector('#row1');
+      createCarouselPage(pageAlive, row1, alive[firstCard].id, alive[secondCard].id, alive[thirdCard].id);
+    } else if (thirdCard == alive.length - 1) {
+      alert('Você já está no ultimo personagem 👀');
+    } else if (pageAlive <= 1) {
+      alert('Você já está no primeiro personagem 👀');
+    };
+  };
   
   
