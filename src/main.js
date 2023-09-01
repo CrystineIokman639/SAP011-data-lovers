@@ -10,31 +10,37 @@ import { createCarouselPage } from './carousel.js';
 import { carouselAlienFilter } from './carousel.js';
 import { carouselOrderFilter } from './carousel.js';
 import data from './data/rickandmorty/rickandmorty.js';
+import { id } from 'prelude-ls';
 
-// let menu = document.querySelector(".nav");
-// menu.addEventListener('click', function (e) {
-//   e.preventDefault();
-//   menu.style.display = "block";
-//   if(menu.style.display == "block"){
-//     let newMenu = menu.style.display = "none";
-//   }
-//   return newMenu
-// });
+let nav = document.querySelector(".expand");
+let menu = document.querySelector(".menu")
+
+nav.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log(menu.classList);
+  if(menu.classList.contains("menu-block")){
+    menu.classList.remove("menu-block");
+    menu.classList.add("menu-none");
+  }else{
+    menu.classList.remove("menu-none");
+    menu.classList.add("menu-block");
+  }
+});
 
 const verse = document.querySelector('.card1');
 const infoVerse = document.querySelector('.back');
 const row = document.querySelector('.row-wrapper');
 
 verse.addEventListener('mouseenter', enter)
- function enter(){
+ function enter(name, status, spicies, gender, origin, id){
  infoVerse.innerHTML=`<img src="image/verse.jpg"
  alt="rick aparecendo em um portal em baixo e tentando pegar a arma de portal que esta em cima">
- <li id="name1">Nome:${'test'}</li>
- <li id="status1">STATUS</li>
- <li id="spicies1">Especie</li>
- <li id="gender1">Genero</li>
- <li id="origin1">Origen</li>
- <li id="code1">1</li>
+ <li id="name1">Nome:${name}</li>
+ <li id="status1">${status}</li>
+ <li id="spicies1">${spicies}</li>
+ <li id="gender1">${gender}</li>
+ <li id="origin1">${origin}</li>
+ <li id="code1">${id}</li>
  </section>`
  };
 

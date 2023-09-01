@@ -54,7 +54,6 @@ body {
 }
 
 .expand{
-    width: 100%;
     padding-left: 10px;
 }
 
@@ -79,8 +78,21 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    /* width: 2.1vw; */
+    background-image: url("image/rick-and-morty.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 15vw;
 
+
+}
+.menu-block{
+    display:block;
+}
+
+.menu-none{
+    display: none;;
 }
 
 .menu {
@@ -91,7 +103,6 @@ nav{
     height: 100vh;
     width: 15vw;
     padding: 20px;
-    
     float: left;
     font-family: "get-schwifty";
     font-size: 30px;
@@ -242,13 +253,13 @@ nav{
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 2.5rem;
     color:#44ff00;
     display: flex; 
-    align-items: ;
+    align-items: right;
     
 }
 

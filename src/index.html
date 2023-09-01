@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Rick and Morty</title>
   <link rel="stylesheet" href="style.css" />
-  <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
-  <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
-  <nav>
-  <section class="expand">
-  <section class="menu">
-    <ion-icon id="i" name="grid-outline" alt="icone menu" ></ion-icon>
-    <h1>Menu</h1>
-    <section>
-      <section class="container_de_busca">
-        <section class="input-with-icon">
-          <input type="text" class="procurar" name="pesquisar" placeholder="BUSCAR" autocomplete="off">
-          <button type="submit" class="lupa-button">
-            <img src="image/lupa.svg" alt="lupa" height="15" width="15">
-          </button>
+  <nav class="expand">
+    <ion-icon id="i" name="grid-outline" alt="icone menu"></ion-icon>
+    <section class="menu menu-block">
+      <h1>Menu</h1>
+      <section>
+        <section class="container_de_busca">
+          <section class="input-with-icon">
+            <input type="text" class="procurar" name="pesquisar" placeholder="BUSCAR" autocomplete="off">
+            <button type="submit" class="lupa-button">
+              <img src="image/lupa.svg" alt="lupa" height="15" width="15">
+            </button>
+          </section>
         </section>
       </section>
+      <section>
+        <p class="trans" id="order">A-Z</p>
+        <p class="trans" id="species">especie</p>
+        <p class="trans" id="status">estado de vida</p>
+        <p class="trans" id="gender">genero</p>
+        <p class="trans" id="origin">planeta</p>
+      </section>
     </section>
-    <section>
-      <p class="trans" id="order">A-Z</p>
-      <p class="trans" id="species">especie</p>
-      <p class="trans" id="status">estado de vida</p>
-      <p class="trans" id="gender">genero</p>
-      <p class="trans" id="origin">planeta</p>
-    </section>
-  </section>
-  </section>  
   </nav>
   <header>
     <Section class="title"><img src="image/Rick-And-Morty-Logo.png"></Section>
   </header>
-  <main class ="one">
+  <main class="one">
     <h3>Todos:</h3>
     <section class="container">
       <button class="arrow-left" aria-label="previous image">&#9664;</button>
@@ -87,4 +87,5 @@
   </footer>
   <script src="main.js" type="module"></script>
 </body>
+
 </html>
