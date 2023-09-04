@@ -10,7 +10,6 @@ import { createCarouselPage } from './carousel.js';
 import { carouselAlienFilter } from './carousel.js';
 import { carouselOrderFilter } from './carousel.js';
 import data from './data/rickandmorty/rickandmorty.js';
-import { id } from 'prelude-ls';
 
 let nav = document.querySelector(".expand");
 let menu = document.querySelector(".menu")
